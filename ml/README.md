@@ -1,6 +1,6 @@
 机器学习
 
-[KNN算法](http://www.hao123.com)
+[KNN算法](knn/README.md)
 
 决策树
 
