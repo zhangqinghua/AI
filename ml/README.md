@@ -1,6 +1,6 @@
 机器学习
 
-<a href="knn/README.md">KNN算法</a>
+<a href="/zhangqinghua/AI/README.md">KNN算法</a>
 
 决策树
 
