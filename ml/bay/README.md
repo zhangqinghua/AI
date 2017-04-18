@@ -7,7 +7,7 @@
 
 
 <h2>病人分类的例子</h2>
-<table style="text-align:left;border:8;bgcolor:red">
+<table style="text-align:left;border:2px;bgcolor:red">
     <tr>
         <th>职业</th>
         <th>症状</th>
@@ -41,7 +41,7 @@
     <tr>
         <td>教师</td>
         <td>头痛</td>
-        <td>脑震荡</tdth>
+        <td>脑震荡</td>
     </tr>
 </table>
 <p>
@@ -64,4 +64,3 @@
 <p></p>
 
 <h4>留言板垃圾</h4>
-<p></p>
