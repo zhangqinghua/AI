@@ -1,25 +1,38 @@
-朴素贝叶斯算法
+<style>
+    p{
+        font-family:monaco,微软雅黑
+    }
+</style>
 
-<table border="1">
-<tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
-</tr>
-<tr>
-<td></td>
-<td>row 2, cell 2</td>
-</tr>
-</table>
+<h1>Naive Bayes Classifier</h1>
 
-<table border="1">
-<tr>
-  <th>姓名</th>
-  <th>电话</th>
-  <th>电话</th>
-</tr>
-<tr>
-  <td>Bill Gates</td>
-  <td>555 77 854</td>
-  <td>555 77 855</td>
-</tr>
+<h2></h2>
+<table>
+    <tr>
+        <th>职业</th>
+        <th>症状</th>
+        <th>疾病</th>
+    </tr>
+    
 </table>
+<p>
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+</p>
+
+<p>
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+    In machine learning, naive bayes classifiers are 
+</p>
+
+<h4>垃圾邮件分类</h4>
+<p></p>
+
+<h4>留言板垃圾</h4>
+<p></p>
