@@ -16,27 +16,27 @@
     <tr>
         <td>护士</td>
         <td>打喷嚏</td>
-        <td>感冒</tdth>
+        <td>感冒</td>
     </tr>
     <tr>
         <td>农夫</td>
         <td>打喷嚏</td>
-        <td>过敏</tdth>
+        <td>过敏</td>
     </tr>
     <tr>
         <td>建筑工人</td>
         <td>头痛</td>
-        <td>脑震荡</tdth>
+        <td>脑震荡</td>
     </tr>
     <tr>
         <td>建筑工人</td>
         <td>头痛</td>
-        <td>感冒</tdth>
+        <td>感冒</td>
     </tr>
     <tr>
         <td>教师</td>
         <td>打喷嚏</td>
-        <td>感冒</tdth>
+        <td>感冒</td>
     </tr>
     <tr>
         <td>教师</td>
