@@ -7,7 +7,7 @@
 
 
 <h2>病人分类的例子</h2>
-<table style="text-align:left;">
+<table style="text-align:left;font-size:8px">
     <tr>
         <th>职业</th>
         <th>症状</th>
