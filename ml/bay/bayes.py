@@ -1,4 +1,4 @@
-from numpy import ones, log, array
+from numpy import ones, log
 
 def loadDataSet():
     postingList = [['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'],
@@ -77,18 +77,18 @@ def classifyNB(vec2Classify, p0Vec, p1Vec, pClass1):
     return 0
     
     
-listOposts, listClasses = loadDataSet()
-myVocabList = createVocabList(listOposts)
-
-trainMat = []
-for postinDoc in listOposts:
-    trainMat.append(bagOfWordsVecMN(myVocabList, postinDoc))
-
-p0V, p1V, pAb = trainNB(trainMat, listClasses)
-print(p0V)
-
-
-testEntry = ['love', 'stupid', 'stupid']
-thisDoc = array(bagOfWordsVecMN(myVocabList, testEntry))
-print(testEntry, 'classified as: ', classifyNB(thisDoc, p0V, p1V, pAb))
+# listOposts, listClasses = loadDataSet()
+# myVocabList = createVocabList(listOposts)
+# 
+# trainMat = []
+# for postinDoc in listOposts:
+#     trainMat.append(bagOfWordsVecMN(myVocabList, postinDoc))
+# 
+# p0V, p1V, pAb = trainNB(trainMat, listClasses)
+# print(p0V)
+# 
+# 
+# testEntry = ['love', 'stupid', 'stupid']
+# thisDoc = array(bagOfWordsVecMN(myVocabList, testEntry))
+# print(testEntry, 'classified as: ', classifyNB(thisDoc, p0V, p1V, pAb))
 
