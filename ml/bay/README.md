@@ -13,7 +13,16 @@
         <th>症状</th>
         <th>疾病</th>
     </tr>
-    
+    <tr>
+        <td>职业</td>
+        <td>症状</td>
+        <td>疾病</tdth>
+    </tr>
+    <tr>
+        <td>职业</td>
+        <td>症状</td>
+        <td>疾病</tdth>
+    </tr>
 </table>
 <p>
     In machine learning, naive bayes classifiers are 
