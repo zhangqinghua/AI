@@ -41,8 +41,8 @@ def bagOfWordsVecMN(vocabList, inputSet):
 
 # 计算每个词属于侮辱性词的概率
 def trainNB(trainMatrix, trainCategory):
-    numTrainDocs = len(trainMatrix)
-    numWords = len(trainMatrix[0])
+            numTrainDocs = len(trainMatrix)
+     numWords = len(trainMatrix[0])
     pAbusive = sum(trainCategory) / float(numTrainDocs)
     
     # 如果其中一个概率值为0，那么后的乘积也为0。为降低 这种影响，可以将所有词的出现数初始化为1，并将分母初始化为2。 
