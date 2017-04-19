@@ -1,5 +1,48 @@
+# Logistic回归
+
+## 线性回归(Linear Reg)
+
+假设我们有一个二手房交易记录的数据集，已知房屋面积、卧室数量和房屋的交易价格，如下表：
+
+| Living area | Bedrooms | Prices |
+| :---------: | :------: | :----: |
+|    2104     |    3     |  400   |
+|    1600     |    3     |  330   |
+|    2400     |    3     |  369   |
+|    1416     |    2     |  232   |
+|    3000     |    4     |  540   |
+
+假如有一个房子要卖，我们希望通过上表中的数据估算这个房子的价格。这个问题就是典型的回归问题，这边文章主要讲回归中的线性回归问题。
+
+
+
+回归的目的是通过几个已知数据来预测另一个数值型数据的目标值
+
+**海维塞德阶跃函数**
+
+能接受所有的输入然后预测出类别。例如，在两个类的情况下，上述函数输出0或1。函数称为**海维塞德阶跃函数**
+
+
+
+**Sigmoid函数**
+
+![S(t)={\frac {1}{1+e^{-t}}}.](https://wikimedia.org/api/rest_v1/media/math/render/svg/a26a3fa3cbb41a3abfe4c7ff88d47f0181489d13)
+
+![img](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/320px-Logistic-curve.svg.png)
+
+
+
+**梯度下降**
+
+![img](http://images0.cnblogs.com/blog/665518/201508/031938497051596.png)
+
+**随机梯度下降**
+
+![img](http://images0.cnblogs.com/blog/665518/201508/031938564554933.png)
+
 <table>
 <tr>
+
 	<th>Logistic回归</th>
 </tr>
 <tr>
