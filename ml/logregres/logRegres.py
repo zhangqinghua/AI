@@ -47,7 +47,7 @@ def stocGradAscent(dataMatrix, classLabels, numIter=10):
     
 def plotBestFit(wei):
     import matplotlib.pyplot as plt
-#     weights = wei.getA()
+    weights = wei.getA()
     dataMat, labelMat = loadDataSet()
     dataArr = array(dataMat)
     n = shape(dataArr)[0]
@@ -73,9 +73,42 @@ def plotBestFit(wei):
     plt.ylabel("X2")
     plt.show()
     
-dataMat, labelMat = loadDataSet()
-# weights = gradAscent(dataMat, labelMat)
-weights = stocGradAscent(array(dataMat), labelMat)
-plotBestFit(weights)
+def classifyVector(inx, weights):
+    prob = sigmoid(sum(inx * weights))
+    if prob > 0.5 : return 1.0
+    else : return 0.0
+
+def colicTest():
+    frTrain = open('horseColicTraining.txt')
+    frTest = open('horseColicTest.txt')
+    trainingSet = []
+    trainLabels = []
+    for line in frTrain.readlines():
+        currLine = line.strip().split('\t')
+        lineArr = []
+        for i in range(21):
+            lineArr.append(float(currLine[i]))
+        trainingSet.append(lineArr)
+        trainLabels.append(float(currLine[21]))
+    trainWeights = stocGradAscent(array(trainingSet), trainLabels, 500)
+    errorCount = 0
+    numTestVec = 0
+    for line in frTest.readlines():
+        numTestVec += 1.0
+        currLine = line.strip().split('\t')
+        lineArr = []
+        for i in range(21):
+            lineArr.append(float(currLine[i]))
+        if int(classifyVector(array(lineArr), trainWeights)) != int(currLine[21]):
+            errorCount += 1
+    errorRate = (float(errorCount) / numTestVec)
+    print('The error rate of this test is: %f' %errorRate)
+    return errorRate
+
+colicTest()
+# dataMat, labelMat = loadDataSet()
+# # weights = gradAscent(dataMat, labelMat)
+# weights = stocGradAscent(array(dataMat), labelMat)
+# plotBestFit(weights)
 
 
