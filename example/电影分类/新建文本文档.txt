@@ -1,0 +1,8 @@
+电影名称,打斗镜头,接吻镜头,电影类型 
+California Man,3,104,爱情片
+He’s Not Really into Dudes,2,100,爱情片
+Beautiful Woman,1,81,爱情片
+Kevin Longblade,101,10,动作片
+Robo Slayer 3000,99,5,动作片 
+Amped II,98,2,动作片 
+?,18,90,未知
