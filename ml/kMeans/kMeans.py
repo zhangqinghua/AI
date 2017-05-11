@@ -60,7 +60,7 @@ def kMeans(dataSet, k, distMeans = distEclud, createCent = randCent):
 
 dataMat = loadDataSet('testSet.txt')
 
-centroids, clusterAssment =  kMeans(dataMat, 4)
+# centroids, clusterAssment =  kMeans(dataMat, 4)
 
 # test = mat(array([[1,2], [3, 4]]))
 # print(test[:, 0].A)
@@ -77,8 +77,50 @@ centroids, clusterAssment =  kMeans(dataMat, 4)
 
 # centroids = randCent(dataMat, 4)
 
-plt.plot(dataMat[:, 0], dataMat[:, 1], 'ro')
-plt.plot(centroids[:, 0], centroids[:, 1], 'go')
-plt.show()
+# plt.plot(dataMat[:, 0], dataMat[:, 1], 'ro')
+# plt.plot(centroids[:, 0], centroids[:, 1], 'go')
+# plt.show()
 
+
+def biKmeans(dataSet, k, distMeans = distEclud):
+    m = shape(dataSet)[0]
+    # 创建一个矩阵来存储数据集中每个点的簇分配结果及平方误差，
+    clusterAssment = mat(zeros((m, 2)))
+    # 计算整个数 据集的质心
+    centroid0 = mean(dataSet, axis = 0).tolist()[0]
+    # 使用一个列表来保留所有的质心 
+    centlist = [centroid0]
+    # 遍历数据集中所有 点来计算每个点到质心的误差值
+    for j in range(m):
+        clusterAssment[j, 1] = distMeans(mat(centroid0), dataSet[j, :]) ** 2
+    # 该循环会不停对簇进行划分，直到得到想要的簇数目为止
+    while len(centlist) < k:
+        # 将最小SSE置设为无穷大
+        lowestSSE = inf
+        # 遍历簇列表centList中的每 一个簇
+        for i in range(len(centlist)):
+            # 对每个簇，将该簇中的所有点看成一个小的数据集ptsInCurrCluster
+            ptsInCurrentCluster = dataSet[nonzero(clusterAssment[:, 0].A == i)[0], :]
+            centroidMat, splitClustAss = kMeans(ptsInCurrentCluster, 2, distMeans)
+            sseSplit = sum(splitClustAss[:, 1])
+            sseNoSplit = sum(clusterAssment[nonzero(clusterAssment[:, 0].A != i)[0]], 1)
+            print('sseSplit, and notSplit:' . sseSplit, sseNoSplit)
+            if (sseSplit * sseNoSplit) < lowestSSE:
+                bestCentToSplit = i
+                bestNewCents = centroidMat
+                bestClustAss = splitClustAss.copy()
+                lowestSSE = sseSplit + sseNoSplit
+        bestClustAss[nonzero(bestClustAss[:, 0].A == 1)[0], 0] = len(centlist)
+        bestClustAss[nonzero(bestClustAss[:, 0].A == 0)[0], 0] = bestCentToSplit
+        print('the bestCentToSplit is: ', bestCentToSplit)
+        print('the len of bestClustAss is:', len(bestClustAss))
+        centlist[bestCentToSplit] = bestNewCents[0, :]
+        centlist.append(bestNewCents[1, :])
+        clusterAssment[nonzero(clusterAssment[:, 0].A == bestCentToSplit)[0], :] = bestClustAss
+    return mat(centlist), clusterAssment
+
+
+testData = mat(array([[1,2], [1,5]]))
+
+print(testData[nonzero(testData[:, 0].A == 1)])
 
