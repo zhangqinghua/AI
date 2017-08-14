@@ -28,6 +28,15 @@ BP算法
 ### 工作状态 
 神经元间的连接权不变，神经网络作为分类器、预测器等使用。
 
+# 强化学习
+## 直接选行为
+Policy Gradients
+## 基于价值选行为
+Q learning
+Sarsa
+Deep Q-Network
+## 想象环境并从其中学习
+Model based RL
 ## 强化学习要素
 ### 环境模型
 ### Agent（也就是学习者）
