@@ -30,13 +30,11 @@ BP算法
 
 # 强化学习
 ## 直接选行为
-Policy Gradients
+直接输出行为的 policy gradients
 ## 基于价值选行为
-Q learning
-Sarsa
-Deep Q-Network
+使用表格学习的 q learning, sarsa, 使用神经网络学习的 deep q network
 ## 想象环境并从其中学习
-Model based RL
+了解所处的环境, 想象出一个虚拟的环境并从虚拟的环境中学习, Model based RL
 ## 强化学习要素
 ### 环境模型
 ### Agent（也就是学习者）
